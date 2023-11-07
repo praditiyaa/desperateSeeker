@@ -16,25 +16,25 @@ Target:
 
 Buatlah web layouting menggunakan HTML dan CSS (boleh menggunakan CSS framework) untuk aplikasi client kamu meliputi halaman:
 
-- [ ] **Public site**
-  - [ ] Halaman Home/Landing Page
+- [X] **Public site**
+  - [X] Halaman Home/Landing Page
     - Halaman yang berfungsi untuk menampilkan data Entitas Utama berbentuk Card, tambahkan input search/filter dan pagination pada halaman ini, buatlah halaman ini dengan layout yang rapi dan semenarik mungkin.
-  - [ ] Halaman Detail
+  - [X] Halaman Detail
     - Buatlah Halaman yang berisi detail dari Entitas Utama.
 
 - [ ] **CMS site**
-  - [ ] Halaman Login
+  - [X] Halaman Login
     Pada halaman ini buatlah sebuah form untuk menampung input email dan password user yang digunakan untuk masuk ke CMS
-  - [ ] Halaman list entitas utama . Tampilkan data entity dalam bentuk Tabel .
-  - [ ] Navbar / Sidebar yang berfungsi sebagai navigasi halaman.
-  - [ ] Halaman create entitas utama
+  - [X] Halaman list entitas utama . Tampilkan data entity dalam bentuk Tabel .
+  - [X] Navbar / Sidebar yang berfungsi sebagai navigasi halaman.
+  - [X] Halaman create entitas utama
     - Buatlah form yang berfungsi sebagai penampung input data entitas utama yang akan dibuat, sesuaikanlah input dengan dengan tipe yang sesuai. Untuk imgUrl buatlah input bertipe text saja.
-  - [ ] Halaman edit entitas utama
+  - [X] Halaman edit entitas utama
     - Buatlah form yang sama persis seperti pada halaman create dengan Judul halaman/form yang berbeda.
   - [ ] Halaman upload image entitas utama
     - Buatlah sebuah halaman yang menampilkan nama/title entitas utama + gambar (yang akan diubah), beserta sebuah input berupa select File untuk property imgUrl.
-  - [ ] Halaman list untuk entitas kedua. Tampilkan data entity dalam bentuk Tabel .
-  - [ ] Halaman register staff
+  - [X] Halaman list untuk entitas kedua. Tampilkan data entity dalam bentuk Tabel .
+  - [X] Halaman register staff
     - Pada halaman ini buatlah sebuah form untuk menampung input semua data user yang akan didaftarkan oleh admin.
 
 ## **W2D2**
