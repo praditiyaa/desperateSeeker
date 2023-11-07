@@ -16,12 +16,25 @@
 <body>
   <!-- To Login User -->
   <div class="h-screen bg-slate-100">
-    <nav class="nav-bar p-2.5 flex flex-row justify-between items-center bg-slate-200">
+    <nav class="nav-bar p-2.5 flex flex-row justify-between items-center bg-slate-200 shadow-md">
       <a href="">
-        <h1 class="font-bold">DesperateSeeker</h1>
+        <h1 class="font-semibold w-56 hover:text-gray-600 text-gray-500">DesperateSeeker</h1>
       </a>
-      <div class="side-nav flex flex-row gap-2">
-        <button class="btn btn-outline">Login</button>
+      <div class="flex gap-5">
+        <a href="">
+          <p class="text-lg font-medium hover:text-gray-600 text-gray-500">Jobs</p>
+        </a>
+        <p class="text-lg font-medium pointer-events-none">/</p>
+        <a href="">
+          <p class="text-lg font-medium hover:text-gray-600 text-gray-500">Companies</p>
+        </a>
+        <p class="text-lg font-medium pointer-events-none">/</p>
+        <a href="">
+          <p class="text-lg font-medium hover:text-gray-600 text-gray-500">Add-User</p>
+        </a>
+      </div>
+      <div class="side-nav w-56 flex justify-end">
+        <button class="btn btn-outline text-gray-500">Login</button>
       </div>
     </nav>
     <main class="flex flex-row h-5/6 justify-center items-center">
@@ -29,7 +42,7 @@
         <img src="../assets/priscilla-du-preez-nNMBa7Y1Ymk-unsplash.jpg"
           class="w-96 h-96 object-cover shadow-md -mr-10 rounded-md" alt="">
         <article class="flex flex-col -ml-10 w-fit h-fit items-center z-10">
-          <h1 class="text-5xl translate-y-5 font-extrabold">Login</h1>
+          <h1 class="text-5xl translate-y-5 font-bold">Login</h1>
           <div class="max-h-fit w-80 p-6 text-gray-700 bg-white shadow-lg rounded-xl bg-clip-border">
             <form class="flex flex-col mt-2">
               <div class="relative z-0 w-full mb-6 group">
@@ -67,7 +80,7 @@
     </nav>
     <main class="flex flex-row h-5/6 justify-center items-center">
       <article class="flex flex-col translate-x-32 z-10">
-        <h1 class="text-5xl -mt-10 self-center z-10 font-extrabold">Add New User</h1>
+        <h1 class="text-5xl -mt-10 self-center z-10 font-bold">Add New User</h1>
         <div class="w-[30rem] max-h-fit -mt-5 p-6 bg-white shadow-md rounded-xl bg-clip-border">
           <form class="">
             <div class="relative z-0 w-full mb-6 group">
@@ -203,7 +216,7 @@
       </div>
     </nav>
     <main class="flex flex-col h-5/6 justify-center items-center">
-      <h1 class="text-5xl translate-y-5 font-extrabold">Add New Job</h1>
+      <h1 class="text-5xl translate-y-5 font-bold">Add New Job</h1>
       <article class="">
         <div class="max-h-fit w-[30rem] p-6 text-gray-700 bg-white shadow-md rounded-xl bg-clip-border">
           <form class="mt-1">
