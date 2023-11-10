@@ -1,4 +1,4 @@
-const Cards = ({ jobType, title, desc, img, comName, displayDetail }) => {
+const Cards = ({ jobType, title, desc, img, comName, clickOnDetail }) => {
   return (
     <>
       <div className='flex w-[40rem] h-fit flex-row rounded-xl bg-white bg-clip-border hover:shadow-xl text-gray-700 shadow-md'>
@@ -18,11 +18,11 @@ const Cards = ({ jobType, title, desc, img, comName, displayDetail }) => {
           <p className=' text-base antialiased font-normal leading-relaxed text-gray-700'>
             {desc}
           </p>
-          <a className='inline-block' href='#'>
+          <a className='inline-block'>
             <button
               className='flex items-center gap-2 px-6 py-3  text-xs font-bold text-center text-gray-500 uppercase align-middle transition-all rounded-lg select-none hover:bg-gray-500/10 active:bg-gray-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none'
               type='button'
-              onClick={displayDetail}
+              onClick={clickOnDetail}
             >
               Learn More
               <svg
