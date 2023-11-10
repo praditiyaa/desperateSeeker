@@ -31,7 +31,7 @@ Buatlah web layouting menggunakan HTML dan CSS (boleh menggunakan CSS framework)
     - Buatlah form yang berfungsi sebagai penampung input data entitas utama yang akan dibuat, sesuaikanlah input dengan dengan tipe yang sesuai. Untuk imgUrl buatlah input bertipe text saja.
   - [X] Halaman edit entitas utama
     - Buatlah form yang sama persis seperti pada halaman create dengan Judul halaman/form yang berbeda.
-  - [ ] Halaman upload image entitas utama
+  - [X] Halaman upload image entitas utama
     - Buatlah sebuah halaman yang menampilkan nama/title entitas utama + gambar (yang akan diubah), beserta sebuah input berupa select File untuk property imgUrl.
   - [X] Halaman list untuk entitas kedua. Tampilkan data entity dalam bentuk Tabel .
   - [X] Halaman register staff
