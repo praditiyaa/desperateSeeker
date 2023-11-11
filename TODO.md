@@ -22,7 +22,7 @@ Buatlah web layouting menggunakan HTML dan CSS (boleh menggunakan CSS framework)
   - [X] Halaman Detail
     - Buatlah Halaman yang berisi detail dari Entitas Utama.
 
-- [ ] **CMS site**
+- [X] **CMS site**
   - [X] Halaman Login
     Pada halaman ini buatlah sebuah form untuk menampung input email dan password user yang digunakan untuk masuk ke CMS
   - [X] Halaman list entitas utama . Tampilkan data entity dalam bentuk Tabel .
@@ -45,13 +45,13 @@ Target:
 
 Mencoba client server communication menggunakan HTTP Client seperti axios.
 
-- [ ]  Public site: Halaman Home
+- [X]  Public site: Halaman Home
 Lakukan GET data entitas utama (include: pagination, filter dan sort) pada halaman ini, tampilkan data sesuai dengan database server kalian.
-- [ ]  CMS site: Halaman Login
+- [X]  CMS site: Halaman Login
 Lakukan POST pada pada halaman ini, Jika proses login berhasil, simpan token di localStorage
-- [ ]  CMS site: Halaman Create
+- [X]  CMS site: Halaman Create
 Lakukan POST pada halaman create entitas utama, coba kalian buat data baru dan pastikan bahwa hanya User yang Valid yang bisa membuat data baru
-- [ ]  Halaman lainnya
+- [X]  Halaman lainnya
 Lengkapi semua proses komunikasi Client Server pada aplikasi kalian
 
 ## **W2D3**
@@ -62,19 +62,19 @@ Target:
 
 Convert layout atau slicing template yang sudah dibuat ke dalam React.js :
 
-- [ ] Coba buat React pada project hasil generate Vite
-- [ ] Public site
-  - [ ] Halaman Home/Landing Page
-  - [ ] Halaman Detail (Public)
+- [X] Coba buat React pada project hasil generate Vite
+- [X] Public site
+  - [X] Halaman Home/Landing Page
+  - [X] Halaman Detail (Public)
 
-- [ ] CMS site
-  - [ ] Halaman Login
-  - [ ] Halaman list entitas utama
-  - [ ] Halaman create entitas utama
-  - [ ] Halaman edit entitas utama
-  - [ ] Halaman upload image entitas utama
-  - [ ] Halaman list untuk entitas kedua
-  - [ ] Halaman register staff
+- [X] CMS site
+  - [X] Halaman Login
+  - [X] Halaman list entitas utama
+  - [X] Halaman create entitas utama
+  - [X] Halaman edit entitas utama
+  - [X] Halaman upload image entitas utama
+  - [X] Halaman list untuk entitas kedua
+  - [X] Halaman register staff
 
 ## **W2D4**
 
@@ -86,35 +86,35 @@ Integrasikan Halaman Web dengan server yang sudah kalian buat pada Challenge/Pro
 
 Pastikan setiap pergantian tampilan terjadi secara reaktif dengan tidak me-refresh web browser mu. Pasca login berhasil, user akan dinavigasikan ke tampilan home/list.
 
-- [ ] Public site
-  - [ ] GET data entitas utama pada halaman Home/Landing Page (include: pagination, filter dan sort)
-  - [ ] GET data detail entitas utama pada halaman Detail
+- [X] Public site
+  - [X] GET data entitas utama pada halaman Home/Landing Page (include: pagination, filter dan sort)
+  - [X] GET data detail entitas utama pada halaman Detail
 
 - [ ] CMS site
-  - [ ] POST pada halaman Login
-  - [ ] GET data entitas utama pada halaman list entitas utama (include: pagination, filter dan sort)
-  - [ ] POST pada halaman create entitas utama
-  - [ ] PUT pada halaman edit entitas utama
+  - [X] POST pada halaman Login
+  - [X] GET data entitas utama pada halaman list entitas utama (include: pagination, filter dan sort)
+  - [X] POST pada halaman create entitas utama
+  - [X] PUT pada halaman edit entitas utama
   - [ ] DELETE untuk menghapus entitas utama
   - [ ] PATCH untuk mengupload image / mengupdate imgUrl entitas utama
-  - [ ] GET data entitas kedua pada Halaman list entitas kedua
-  - [ ] POST pada Halaman register staff
+  - [X] GET data entitas kedua pada Halaman list entitas kedua
+  - [X] POST pada Halaman register staff
 
 ### React Router
 
 Silahkan Implementasikan routing pada aplikasi client kalian.
 
-- [ ] Public site
-  - [ ] Halaman Home/Landing Page
-  - [ ] Halaman Detail
-- [ ] CMS site
-  - [ ] Halaman Login
-  - [ ] Halaman list entitas utama
-  - [ ] Halaman create entitas utama (boleh menggunakan modal)
-  - [ ] Halaman edit entitas utama (boleh menggunakan modal)
-  - [ ] Halaman upload image untuk entitas utama (boleh menggunakan modal)
-  - [ ] Halaman list untuk entitas kedua
-  - [ ] Halaman register staff
+- [X] Public site
+  - [X] Halaman Home/Landing Page
+  - [X] Halaman Detail
+- [X] CMS site
+  - [X]XHalaman Login
+  - [X] Halaman list entitas utama
+  - [X] Halaman create entitas utama (boleh menggunakan modal)
+  - [X] Halaman edit entitas utama (boleh menggunakan modal)
+  - [X] Halaman upload image untuk entitas utama (boleh menggunakan modal)
+  - [X] Halaman list untuk entitas kedua
+  - [X] Halaman register staff
 
 ## **W2D5**
 

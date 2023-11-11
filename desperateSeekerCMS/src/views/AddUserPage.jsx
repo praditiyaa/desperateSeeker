@@ -1,23 +1,18 @@
-import { Link, useOutletContext, useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import axios from 'axios';
 
 const AddUserPage = () => {
-  const [error, setError] = useState({
+  const template = {
     username: '',
     email: '',
     password: '',
     phoneNumber: '',
     address: '',
-  });
+  };
+  const [error, setError] = useState(template);
   const [status, setStatus] = useState();
-  const [userData, setUserData] = useState({
-    username: '',
-    email: '',
-    password: '',
-    phoneNumber: '',
-    address: '',
-  });
+  const [userData, setUserData] = useState(template);
 
   const navigate = useNavigate();
 
@@ -32,17 +27,16 @@ const AddUserPage = () => {
         }
       );
       setStatus(response.data.data.email);
-      setError({
-        username: '',
-        email: '',
-        password: '',
-        phoneNumber: '',
-        address: '',
-      });
+      setError(template);
       navigate('/register');
     } catch (err) {
+      if (err.response.status === 403) {
+        setError(err.response);
+      } else {
+        setError(err.response.data.message);
+      }
       setStatus(false);
-      setError(err.response.data.message);
+      console.log(error);
     }
   };
 
@@ -53,6 +47,11 @@ const AddUserPage = () => {
           Add New User
         </h1>
         <div className='flex flex-col w-[30rem] max-h-fit -mt-5 p-6 bg-white shadow-md rounded-xl bg-clip-border'>
+          {error.status === 403 && (
+            <p className='text-sm self-center text-red-400'>
+              {error.data.message}
+            </p>
+          )}
           {status && (
             <p className='text-sm self-center mb-1 text-red-400'>
               {status} has been added

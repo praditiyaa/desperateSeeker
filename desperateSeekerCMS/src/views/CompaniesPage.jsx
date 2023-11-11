@@ -3,9 +3,9 @@ import Table from '../components/Table';
 import axios from 'axios';
 
 const ComPage = () => {
-  const [comData, setComData] = useState([]); // for fetching data
-  const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [comData, setComData] = useState([]);
+  const [error, setError] = useState(false);
 
   const fetchCom = async () => {
     try {
@@ -15,7 +15,7 @@ const ComPage = () => {
       });
       setComData(data.data);
     } catch (error) {
-      setLoading(error);
+      setError(error);
     } finally {
       setLoading(false);
     }

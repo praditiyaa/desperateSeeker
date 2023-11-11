@@ -1,28 +1,40 @@
+import { useNavigate } from 'react-router-dom';
+import EditForm from '../views/EditFormPage';
 import AddForm from '../views/AddFormPage';
 
-const Table = ({ jobData, comData }) => {
+const Table = ({ jobData, comData, fetchJobs, delJob, status }) => {
+  const navigate = useNavigate();
+
+  const redirect = (val) => {
+    navigate(`${val}`);
+  };
+
   return (
     <main className=''>
       <article className='flex flex-col mt-5 justify-center items-center'>
-        <div className='flex flex-row w-[70rem] justify-between items-center p-5'>
+        <div className='flex flex-row w-[70rem] justify-around items-center p-5'>
           <h1 className='font-bold text-gray-900'>
             {jobData ? 'List Of Jobs Available' : 'List Of Companies Available'}
           </h1>
-          <button
-            className='btn normal-case btn-ghost bg-slate-200'
-            onClick={() => document.getElementById('my_modal_3').showModal()}
-          >
-            {jobData ? 'Add New Job' : 'Add New Companies'}
-          </button>
-          <dialog id='my_modal_3' className='modal'>
+          {status && (
+            <p className='text-m self-center text-red-400'>{status}</p>
+          )}
+          {jobData && (
+            <button
+              className='btn normal-case btn-ghost bg-slate-200'
+              onClick={() => document.getElementById('add').showModal()}
+            >
+              Add New Job
+            </button>
+          )}
+          <dialog id='add' className='modal'>
             <div className='modal-box'>
               <form method='dialog'>
-                {/* if there is a button in form, it will close the modal */}
                 <button className='btn btn-sm btn-circle btn-ghost absolute right-2 top-2'>
                   ✕
                 </button>
               </form>
-              <AddForm />
+              <AddForm fetchJobs={fetchJobs} />
             </div>
           </dialog>
         </div>
@@ -88,30 +100,42 @@ const Table = ({ jobData, comData }) => {
                     <td className='px-6 py-4'>{data.jobType}</td>
                     <td className='px-6 py-4'>{data?.Company?.email}</td>
                     <td className='px-6 py-4'>
-                      {Date(data?.Company?.createdAt).split('GMT')[0]}
+                      {(data?.createdAt).split('T')[0]}
                     </td>
                     <td className='px-6 py-4 text-right'>
                       <div className='btn-group btn-group-horizontal lg:btn-group-horizontal'>
                         <button
                           className='btn btn-ghost btn-sm'
-                          onClick={() =>
-                            document.getElementById('my_modal_3').showModal()
-                          }
+                          onClick={() => {
+                            document.getElementById('edit').showModal();
+                            redirect(data.id);
+                          }}
                         >
                           edit
                         </button>
-                        <dialog id='my_modal_3' className='modal'>
-                          <div className='modal-box'>
+                        <dialog id='edit' className='modal'>
+                          <div className='modal-box max-w-fit'>
                             <form method='dialog'>
-                              {/* if there is a button in form, it will close the modal */}
-                              <button className='btn btn-sm btn-circle btn-ghost absolute right-2 top-2'>
+                              <button
+                                onClick={() => {
+                                  redirect('/jobs');
+                                }}
+                                className='btn btn-sm btn-circle btn-ghost absolute right-2 top-2'
+                              >
                                 ✕
                               </button>
                             </form>
-                            <AddForm />
+                            <EditForm fetchJobs={fetchJobs} />
                           </div>
                         </dialog>
-                        <button className='btn btn-ghost btn-sm'>Delete</button>
+                        <button
+                          onClick={() => {
+                            delJob(data.id);
+                          }}
+                          className='btn btn-ghost btn-sm'
+                        >
+                          Delete
+                        </button>
                       </div>
                     </td>
                   </tr>
@@ -129,30 +153,6 @@ const Table = ({ jobData, comData }) => {
                     <td className='px-6 py-4'>{data.email}</td>
                     <td className='px-6 w-[26rem] py-4'>{data.description}</td>
                     <td className='px-6 py-4'>{data.Jobs.length}</td>
-                    <td className='px-6 py-4 text-right'>
-                      <div className='btn-group btn-group-horizontal lg:btn-group-horizontal'>
-                        <button
-                          className='btn btn-ghost btn-sm'
-                          onClick={() =>
-                            document.getElementById('my_modal_3').showModal()
-                          }
-                        >
-                          edit
-                        </button>
-                        <dialog id='my_modal_3' className='modal'>
-                          <div className='modal-box'>
-                            <form method='dialog'>
-                              {/* if there is a button in form, it will close the modal */}
-                              <button className='btn btn-sm btn-circle btn-ghost absolute right-2 top-2'>
-                                ✕
-                              </button>
-                            </form>
-                            <AddForm />
-                          </div>
-                        </dialog>
-                        <button className='btn btn-ghost btn-sm'>Delete</button>
-                      </div>
-                    </td>
                   </tr>
                 ))}
             </tbody>

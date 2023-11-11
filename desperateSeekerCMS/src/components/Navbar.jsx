@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom';
 
 const Navbar = ({ log, setLog }) => {
+  if (localStorage.key('token')) {
+    setLog(true);
+  }
+
   const logout = () => {
     setLog(false);
+    localStorage.removeItem('token');
   };
 
   return (

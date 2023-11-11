@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const LoginPage = () => {
-  const [log, setLog] = useOutletContext();
+  const [log, setLog] = useOutletContext(false);
   const [error, setError] = useState(false);
   const [credential, setCredential] = useState({ email: '', password: '' });
 
@@ -61,7 +61,7 @@ const LoginPage = () => {
                 </div>
                 <div className='relative z-0 w-full mb-6 group'>
                   <input
-                    type='text'
+                    type='password'
                     value={credential.password}
                     className='block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-gray-500 focus:outline-none focus:ring-0 focus:border-gray-600 peer'
                     placeholder=' '

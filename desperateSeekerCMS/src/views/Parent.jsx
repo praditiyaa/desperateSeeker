@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
 const Parent = () => {
-  const [log, setLog] = useState(true);
+  const [log, setLog] = useState(false);
 
   return (
     <>
