@@ -89,7 +89,7 @@ const Table = ({ jobData, comData, fetchJobs, delJob, status }) => {
             <tbody className=''>
               {jobData &&
                 jobData.map((data) => (
-                  <tr className='bg-white border-b'>
+                  <tr key={data.id} className='bg-white border-b'>
                     <th
                       scope='row'
                       className='px-6 py-4 font-medium text-gray-900 whitespace-nowrap'
@@ -142,7 +142,7 @@ const Table = ({ jobData, comData, fetchJobs, delJob, status }) => {
                 ))}
               {comData &&
                 comData.map((data) => (
-                  <tr className='bg-white border-b'>
+                  <tr key={data.id} className='bg-white border-b'>
                     <th
                       scope='row'
                       className='px-6 py-4 font-medium text-gray-900 whitespace-nowrap'

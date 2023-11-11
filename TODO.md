@@ -1,6 +1,6 @@
 # P2-Challenge-2 (Client Side)
 
-- Tema Aplikasi: ...
+- Tema Aplikasi: Job Website
 
 Struktur Folder:
 
@@ -95,8 +95,8 @@ Pastikan setiap pergantian tampilan terjadi secara reaktif dengan tidak me-refre
   - [X] GET data entitas utama pada halaman list entitas utama (include: pagination, filter dan sort)
   - [X] POST pada halaman create entitas utama
   - [X] PUT pada halaman edit entitas utama
-  - [ ] DELETE untuk menghapus entitas utama
-  - [ ] PATCH untuk mengupload image / mengupdate imgUrl entitas utama
+  - [X] DELETE untuk menghapus entitas utama
+  - [X] PATCH untuk mengupload image / mengupdate imgUrl entitas utama
   - [X] GET data entitas kedua pada Halaman list entitas kedua
   - [X] POST pada Halaman register staff
 

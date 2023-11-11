@@ -1,18 +1,16 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
-import Cards from '../components/Cards.jsx';
-import NavbarBot from '../components/NavbarBot.jsx';
-import LimitPage from '../components/LimitPage.jsx';
-import Pagination from '../components/Pagination.jsx';
 import { KeyboardArrowRight, KeyboardArrowLeft } from '@mui/icons-material';
+import Pagination from '../components/Pagination.jsx';
+import LimitPage from '../components/LimitPage.jsx';
+import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import Cards from '../components/Cards.jsx';
+import axios from 'axios';
 
 const HomePage = () => {
   const [mainData, setMainData] = useState({}); // for fetching data
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [params, setParams] = useState(window.location.search);
-  const [search, setSearch] = useState('');
 
   const navigate = useNavigate();
 
@@ -48,8 +46,7 @@ const HomePage = () => {
 
   return (
     <>
-      <NavbarBot search={search} setSearch={setSearch} />
-      <main className='flex justify-center overflow-auto items-center'>
+      <main className='flex justify-center overflow-auto mt-10 items-center'>
         <article className='card-container h-[72vh] grid grid-cols-2 gap-5 justify-center'>
           {mainData?.result?.data.map((datum) => (
             <Cards

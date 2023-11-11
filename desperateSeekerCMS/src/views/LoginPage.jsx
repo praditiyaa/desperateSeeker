@@ -1,5 +1,6 @@
 import { Link, useOutletContext, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import Button from '../components/Button';
 import axios from 'axios';
 
 const LoginPage = () => {
@@ -79,12 +80,7 @@ const LoginPage = () => {
                     Password
                   </label>
                 </div>
-                <button
-                  type='submit'
-                  className='text-white self-center bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center '
-                >
-                  Submit
-                </button>
+                <Button />
               </form>
             </div>
           </article>
